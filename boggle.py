@@ -1,8 +1,11 @@
 from time import time
 
+# You can use the board_generator.py to make a board
+text_file = "some_text_file" 
+
 # Function to load the Boggle board from a file
 def load_board() -> list:
-    with open('3x3.txt', 'r') as file:
+    with open(text_file, 'r') as file:
         board = [list(line.strip().replace(" ", "").lower()) for line in file]
     return board
 
